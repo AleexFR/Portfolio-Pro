@@ -1,67 +1,11 @@
 export const photosData = [
   {
     id: 1,
-    title: "Projet Web Design",
-    description: "Création d'une interface moderne et responsive pour une application web de gestion de projets. Design épuré avec des animations fluides et une expérience utilisateur optimisée.",
-    image: "/api/placeholder/400/400",
+    title: "Projet Netmovie",
+    description: "NetMovie est une plateforme communautaire interactive dédiée au 7ème art. Elle permet d'explorer une vaste base de données de films, d'acteurs et de réalisateurs grâce à une navigation fluide et croisée. Au-delà de la simple consultation, l'expérience repose sur l'engagement des utilisateurs via le module Swap, un système de vote influençant les classements globaux, et un forum d'échange. La création d'un compte personnel débloque ces fonctionnalités participatives, tandis qu'une section dédiée aux futurs partenariats souligne l'ambition de développement du projet.",
+    image: "/photos/albums/affiche-netmovie.webp",
     category: "Projets",
     date: "2024-01-15"
-  },
-  {
-    id: 2,
-    title: "Certification React",
-    description: "Certification obtenue après validation des compétences avancées en React, incluant les hooks, le routing et la gestion d'état complexe.",
-    image: "/api/placeholder/400/400",
-    category: "Certifications",
-    date: "2024-01-10"
-  },
-  {
-    id: 3,
-    title: "Architecture Moderne",
-    description: "Photographie d'un bâtiment au design architectural contemporain avec des lignes épurées et des matériaux innovants.",
-    image: "/api/placeholder/400/400",
-    category: "Architecture",
-    date: "2024-01-05"
-  },
-  {
-    id: 4,
-    title: "Interface Mobile",
-    description: "Design d'une application mobile avec focus sur l'ergonomie et l'accessibilité. Interface intuitive et adaptative.",
-    image: "/api/placeholder/400/400",
-    category: "Projets",
-    date: "2023-12-28"
-  },
-  {
-    id: 5,
-    title: "Workshop Design",
-    description: "Participation à un workshop sur les nouvelles tendances du design UX/UI et les méthodes de prototypage rapide.",
-    image: "/api/placeholder/400/400",
-    category: "Certifications",
-    date: "2023-12-20"
-  },
-  {
-    id: 6,
-    title: "Paysage Urbain",
-    description: "Capture d'un paysage urbain au coucher du soleil, mettant en valeur les lumières de la ville et l'architecture moderne.",
-    image: "/api/placeholder/400/400",
-    category: "Photographie",
-    date: "2023-12-15"
-  },
-  {
-    id: 7,
-    title: "Dashboard Analytics",
-    description: "Création d'un tableau de bord interactif pour la visualisation de données complexes avec des graphiques dynamiques.",
-    image: "/api/placeholder/400/400",
-    category: "Projets",
-    date: "2023-12-10"
-  },
-  {
-    id: 8,
-    title: "Formation TypeScript",
-    description: "Certification complète sur TypeScript et son intégration dans des projets React de grande envergure.",
-    image: "/api/placeholder/400/400",
-    category: "Certifications",
-    date: "2023-12-05"
   }
 ];
 

@@ -191,6 +191,65 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-museum-900 dark:text-museum-50 mb-8 text-center">
+            Compétences Techniques
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {[
+              { name: 'HTML 5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+              { name: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+              { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+              { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+              { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+              { name: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
+              { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+              { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+              { name: 'WordPress', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
+              { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+              { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+              { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+              { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+              { name: 'Vercel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vercel.svg' },
+              { name: 'Netlify', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netlify.svg' },
+              { name: 'Astro', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/astro.svg' }
+            ].map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                variants={cardVariants}
+                custom={index}
+                whileHover={{ 
+                  y: -5,
+                  scale: 1.05,
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
+                }}
+                className="museum-card p-6 text-center group cursor-default"
+              >
+                <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-full h-full object-contain filter dark:brightness-0 dark:invert transition-all duration-300 group-hover:scale-110"
+                    onError={(e) => {
+                      e.target.src = `https://picsum.photos/seed/${skill.name}/64/64.jpg`;
+                    }}
+                  />
+                </div>
+                <p className="text-sm font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors">
+                  {skill.name}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center space-x-4 p-6 bg-museum-50 dark:bg-museum-900 rounded-lg">

@@ -134,7 +134,7 @@ const Home = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col md:flex-row items-center justify-center gap-8 text-museum-600 dark:text-museum-400"
+          className="flex flex-col md:flex-row items-center justify-center gap-8 text-museum-600 dark:text-museum-400 mb-12"
         >
           <motion.a
             href={`mailto:${personalInfo.email}`}
@@ -143,15 +143,6 @@ const Home = () => {
           >
             <Mail className="w-4 h-4" />
             <span className="text-sm">{personalInfo.email}</span>
-          </motion.a>
-          
-          <motion.a
-            href={`tel:${personalInfo.phone}`}
-            className="flex items-center space-x-2 hover:text-museum-900 dark:hover:text-museum-50 transition-colors duration-300"
-            whileHover={{ x: 5 }}
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-sm">{personalInfo.phone}</span>
           </motion.a>
           
           <motion.div

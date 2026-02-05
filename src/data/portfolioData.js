@@ -1,8 +1,8 @@
 export const personalInfo = {
   firstName: "Alexandre",
   lastName: "Philip",
-  title: "Titulaire du BTS SIO option SISR",
-  description: "Développeur web passionné par la création d'expériences numériques élégantes et fonctionnelles. Spécialisé dans le développement front-end moderne avec une attention particulière portée au design et à l'expérience utilisateur.",
+  title: "Technicien informatique",
+  description: "Technicien informatique passionné par la création d'expériences numériques élégantes et fonctionnelles. Spécialisé dans le développement front-end moderne avec une attention particulière portée au design et à l'expérience utilisateur.",
   email: "alexandre@aleexp.fr",
   phone: "+33 6 12 34 56 78",
   location: "Ansauvillers, France",

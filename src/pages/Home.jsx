@@ -64,6 +64,12 @@ const Home = () => {
           <h1 className="museum-title mb-4">
             {personalInfo.firstName} <span className="block">{personalInfo.lastName}</span>
           </h1>
+          <motion.p
+            variants={itemVariants}
+            className="text-xl md:text-2xl text-museum-700 dark:text-museum-300 font-medium mb-6"
+          >
+            {personalInfo.title}
+          </motion.p>
         </motion.div>
 
         <motion.div

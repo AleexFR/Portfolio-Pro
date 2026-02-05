@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Github, Linkedin, Twitter, ChevronUp } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../data/portfolioData';
 
@@ -41,20 +41,14 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com',
+      href: 'https://github.com/AleexFR',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/alexandre-philip-091482291/',
       color: 'hover:text-blue-600 dark:hover:text-blue-400'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com',
-      color: 'hover:text-blue-400 dark:hover:text-blue-300'
     }
   ];
 

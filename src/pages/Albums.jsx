@@ -133,7 +133,7 @@ const Albums = () => {
             className="text-center py-12"
           >
             <p className="text-museum-600 dark:text-museum-400">
-              Aucune photo trouvée pour "{searchTerm}"
+              Aucune photo trouvee pour "{searchTerm}"
             </p>
           </motion.div>
         )}

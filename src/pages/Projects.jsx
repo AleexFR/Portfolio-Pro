@@ -329,52 +329,6 @@ const Projects = () => {
                     <span>Cliquez pour voir les détails</span>
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
-                  
-                  {(project.liveUrl || project.githubUrl || project.pdfUrl) && (
-                    <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-museum-200 dark:border-museum-700">
-                      {project.liveUrl && (
-                        <motion.a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="flex items-center space-x-2 px-4 py-2 bg-museum-900 dark:bg-museum-100 text-museum-100 dark:text-museum-900 rounded-md font-medium text-sm transition-colors duration-300 hover:bg-museum-800 dark:hover:bg-museum-200"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          <span>Live Demo</span>
-                        </motion.a>
-                      )}
-                      
-                      {project.githubUrl && (
-                        <motion.a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="flex items-center space-x-2 px-4 py-2 bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-md font-medium text-sm transition-colors duration-300 hover:bg-gray-800 dark:hover:bg-gray-200"
-                        >
-                          <Github className="w-4 h-4" />
-                          <span>GitHub</span>
-                        </motion.a>
-                      )}
-                      
-                      {project.pdfUrl && (
-                        <motion.a
-                          href={project.pdfUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="flex items-center space-x-2 px-4 py-2 bg-red-600 dark:bg-red-500 text-white rounded-md font-medium text-sm transition-colors duration-300 hover:bg-red-700 dark:hover:bg-red-600"
-                        >
-                          <FileText className="w-4 h-4" />
-                          <span>Documentation (PDF)</span>
-                        </motion.a>
-                      )}
-                    </div>
-                  )}
                 </motion.div>
               ))}
             </motion.div>

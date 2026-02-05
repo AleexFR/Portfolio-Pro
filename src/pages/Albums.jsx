@@ -39,6 +39,14 @@ const Albums = () => {
     }
   };
 
+  const openModal = (photo) => {
+    setSelectedPhoto(photo);
+  };
+
+  const closeModal = () => {
+    setSelectedPhoto(null);
+  };
+
   return (
     <section className="min-h-screen py-20 bg-museum-50 dark:bg-museum-900">
       <div className="museum-container">
@@ -57,7 +65,7 @@ const Albums = () => {
             variants={itemVariants}
             className="museum-text max-w-2xl mx-auto mb-8"
           >
-            Decouvrez mes photographies à travers différentes collections
+            Decouvrez mes photographies a travers differentes collections
           </motion.p>
 
           <motion.div
@@ -94,7 +102,7 @@ const Albums = () => {
                 y: -8,
                 boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
               }}
-              onClick={() => setSelectedPhoto(photo)}
+              onClick={() => openModal(photo)}
             >
               <div className="aspect-square bg-museum-200 dark:bg-museum-700 relative overflow-hidden rounded-lg">
                 <img
@@ -139,10 +147,10 @@ const Albums = () => {
         )}
 
         {selectedPhoto && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedPhoto(null)}>
+          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
             <div className="bg-white dark:bg-museum-800 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden relative">
               <button
-                onClick={() => setSelectedPhoto(null)}
+                onClick={closeModal}
                 className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-museum-700 rounded-full shadow-lg hover:bg-museum-100 dark:hover:bg-museum-600 transition-colors duration-300"
               >
                 ×

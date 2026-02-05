@@ -102,7 +102,7 @@ const Footer = () => {
                 { name: 'Accueil', href: '/' },
                 { name: 'À propos', href: '/about' },
                 { name: 'Projets & Certifications', href: '/projects' },
-                { name: 'Contact', href: '/contact' }
+                { name: 'Albums', href: '/albums' }
               ].map((item) => (
                 <motion.div
                   key={item.name}

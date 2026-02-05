@@ -58,7 +58,7 @@ const Home = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="museum-container relative z-10 text-center"
+        className="museum-container relative z-10 text-center pt-24"
       >
         <motion.div variants={itemVariants} className="mb-8">
           <h1 className="museum-title mb-4">

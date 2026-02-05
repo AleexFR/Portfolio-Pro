@@ -22,7 +22,7 @@ const Navigation = ({ isDarkMode, toggleDarkMode }) => {
     { name: 'Accueil', href: '/' },
     { name: 'À propos', href: '/about' },
     { name: 'Projets & Certifications', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Albums', href: '/albums' }
   ];
 
   const navVariants = {

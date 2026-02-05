@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ChevronUp } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Twitter, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../data/portfolioData';
 
@@ -131,15 +131,6 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
                 <span className="text-sm">{personalInfo.email}</span>
-              </motion.a>
-              
-              <motion.a
-                href={`tel:${personalInfo.phone}`}
-                className="flex items-center space-x-3 text-museum-400 hover:text-museum-50 transition-colors duration-300"
-                whileHover={{ x: 5 }}
-              >
-                <Phone className="w-5 h-5" />
-                <span className="text-sm">{personalInfo.phone}</span>
               </motion.a>
               
               <motion.div

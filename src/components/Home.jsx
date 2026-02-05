@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, Phone, MapPin, ExternalLink, Award } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, ExternalLink, Award } from 'lucide-react';
 import { personalInfo, education, certifications } from '../data/portfolioData';
 
 const Home = () => {
@@ -146,15 +146,6 @@ const Home = () => {
           >
             <Mail className="w-4 h-4" />
             <span className="text-sm">{personalInfo.email}</span>
-          </motion.a>
-          
-          <motion.a
-            href={`tel:${personalInfo.phone}`}
-            className="flex items-center space-x-2 hover:text-museum-900 dark:hover:text-museum-50 transition-colors duration-300"
-            whileHover={{ x: 5 }}
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-sm">{personalInfo.phone}</span>
           </motion.a>
           
           <motion.div

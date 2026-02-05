@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const Contact = () => {
@@ -148,20 +148,6 @@ const Contact = () => {
                   <div>
                     <p className="font-medium text-museum-900 dark:text-museum-50">Email</p>
                     <p className="text-museum-600 dark:text-museum-400">{personalInfo.email}</p>
-                  </div>
-                </motion.a>
-
-                <motion.a
-                  href={`tel:${personalInfo.phone}`}
-                  className="flex items-center space-x-4 p-4 museum-card hover:border-museum-400 dark:hover:border-museum-600 transition-all duration-300 group"
-                  whileHover={{ x: 10 }}
-                >
-                  <div className="w-12 h-12 bg-museum-100 dark:bg-museum-700 rounded-full flex items-center justify-center group-hover:bg-museum-200 dark:group-hover:bg-museum-600 transition-colors duration-300">
-                    <Phone className="w-6 h-6 text-museum-600 dark:text-museum-400" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-museum-900 dark:text-museum-50">Téléphone</p>
-                    <p className="text-museum-600 dark:text-museum-400">{personalInfo.phone}</p>
                   </div>
                 </motion.a>
 

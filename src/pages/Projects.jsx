@@ -326,7 +326,7 @@ const Projects = () => {
                     rotate: [0, -2, 2, 0]
                   }}
                 >
-                  <div className="w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-20 h-20 mx-auto mb-4 overflow-hidden rounded-lg group-hover:scale-105 transition-transform duration-300">
                     <img
                       src={cert.image}
                       alt={cert.name}

@@ -103,7 +103,7 @@ const Home = () => {
                 className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
               >
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 overflow-hidden rounded-full">
+                  <div className="w-4 h-4 overflow-hidden rounded">
                     <img
                       src={cert.image}
                       alt={cert.name}

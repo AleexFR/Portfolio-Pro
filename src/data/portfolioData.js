@@ -11,27 +11,27 @@ export const personalInfo = {
 export const experiences = [
   {
     id: 3,
-    title: "Développeur Front-end Senior",
-    company: "Tech Company",
-    period: "2022 - Présent",
-    description: "Développement d'applications web modernes avec React et TypeScript. Leadership technique sur des projets innovants.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js"]
+    title: "Employé Polyvalent",
+    company: "McDonald's, Ressons-sur-Matz",
+    period: "Juillet 2025",
+    description: "Cette expérience m’a permis de développer mon sens du service client, ma réactivité et ma capacité à travailler en équipe dans un environnement rapide.",
+    technologies: ["CLAM", "SAT", "Frites", "UHC"]
   },
   {
     id: 2,
-    title: "Développeur Web Full-stack",
-    company: "Digital Agency",
-    period: "2020 - 2022",
-    description: "Création de sites web sur mesure pour des clients variés. Gestion complète du cycle de développement.",
-    technologies: ["JavaScript", "PHP", "MySQL", "Vue.js"]
+    title: "Stagiaire Informatique",
+    company: "Centre hospitalier Simone Veil, Beauvais",
+    period: "6 Janv - 14 Fév 2025",
+    description: "Interventions dans les différents services de l'hôpital pour résoudre les problèmes informatiques. Création du projet Pandora-BOX.",
+    technologies: ["Assiatnce", "Pandora-BOX"]
   },
   {
     id: 1,
-    title: "Développeur Junior",
-    company: "Start-up Innovante",
-    period: "2019 - 2020",
-    description: "Participation au développement d'une plateforme SaaS. Apprentissage des bonnes pratiques de développement.",
-    technologies: ["HTML", "CSS", "JavaScript", "React"]
+    title: "Stagiaire Informatique",
+    company: "Conseil départemental de l'Oise, Beauvais",
+    period: "Juin 2024",
+    description: "Interventions dans les différents collèges de l'Oise pour changer les équipements informatiques.",
+    technologies: ["Maintenance"]
   }
 ];
 

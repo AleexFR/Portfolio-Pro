@@ -63,43 +63,13 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "Portfolio Designer",
-    description: "Portfolio moderne pour designer graphique avec animations avancées et système de gestion de projets.",
-    image: "/api/placeholder/600/400",
-    technologies: ["React", "Framer Motion", "Tailwind CSS"],
-    features: ["Design responsive", "Animations fluides", "Dark mode", "Optimisé SEO"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/example"
-  },
-  {
-    id: 2,
-    title: "E-commerce Platform",
-    description: "Plateforme e-commerce complète avec panier, paiement et gestion des stocks.",
-    image: "/api/placeholder/600/400",
-    technologies: ["Next.js", "Stripe", "PostgreSQL", "Prisma"],
-    features: ["Panier interactif", "Paiement sécurisé", "Admin dashboard", "API RESTful"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/example"
-  },
-  {
-    id: 3,
-    title: "Task Management App",
-    description: "Application de gestion de tâches collaborative avec temps réel et notifications.",
-    image: "/api/placeholder/600/400",
-    technologies: ["Vue.js", "Firebase", "Vuex", "Vuetify"],
-    features: ["Collaboration temps réel", "Notifications", "Tableaux Kanban", "Rapports"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/example"
-  },
-  {
-    id: 4,
-    title: "Weather Dashboard",
-    description: "Dashboard météo interactif avec prévisions détaillées et visualisations de données.",
-    image: "/api/placeholder/600/400",
-    technologies: ["React", "Chart.js", "OpenWeather API", "Geolocation"],
-    features: ["Prévisions 7 jours", "Cartes interactives", "Alertes météo", "Historique"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/example"
+    title: "Site Physique Quantique",
+    description: "Site web pour le site physique quantique, créer pendant ma première année de BTS SIO.",
+    image: "/photos/projets/screen-quantique.png",
+    technologies: ["HTML", "CSS"],
+    features: ["Formulaire de contact", "Tableau"],
+    liveUrl: "https://quantique.aleexp.fr",
+    githubUrl: "https://github.com/AleexFR/Site-Physique-Quantique"
   }
 ];
 

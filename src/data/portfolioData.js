@@ -106,50 +106,26 @@ export const projects = [
 export const certifications = [
   {
     id: 1,
-    name: "React Developer Certification",
-    issuer: "Meta",
-    date: "2023",
-    credentialId: "RCT-2023-001",
-    image: "/api/placeholder/100/100"
-  },
-  {
-    id: 2,
-    name: "Advanced CSS & Tailwind",
-    issuer: "Frontend Masters",
-    date: "2023",
-    credentialId: "CSS-2023-002",
-    image: "/api/placeholder/100/100"
-  },
-  {
-    id: 3,
-    name: "JavaScript Algorithms",
-    issuer: "freeCodeCamp",
-    date: "2022",
-    credentialId: "JS-2022-003",
-    image: "/api/placeholder/100/100"
-  },
-  {
-    id: 4,
-    name: "TypeScript Fundamentals",
-    issuer: "Microsoft",
-    date: "2022",
-    credentialId: "TS-2022-004",
-    image: "/api/placeholder/100/100"
-  },
-  {
-    id: 5,
-    name: "Web Accessibility",
-    issuer: "Google",
-    date: "2023",
-    credentialId: "A11Y-2023-005",
-    image: "/api/placeholder/100/100"
-  },
-  {
-    id: 6,
     name: "Introduction to Linux (LFS101)",
     issuer: "The Linux Foundation",
     date: "23 Avril 2025",
     credentialId: "LF-06dbp4x506",
     image: "/photos/certifications/intro-badge.png"
+  },
+  {
+    id: 2,
+    name: "Cybersecurity Essentials (LFC108)",
+    issuer: "The Linux Foundation",
+    date: "21 Mai 2025",
+    credentialId: "LF-9I2bq0iy68",
+    image: "/photos/certifications/cyber-badge.png"
+  },
+  {
+    id: 3,
+    name: "XSS Exploits and Defenses (LFEL1010)",
+    issuer: "The Linux Foundation",
+    date: "24 Mai 2025",
+    credentialId: "LF-cd0gtxw8nh",
+    image: "/photos/certifications/xss-badge.png"
   }
 ];

@@ -1,16 +1,16 @@
 export const personalInfo = {
   firstName: "Alexandre",
   lastName: "Philip",
-  title: "Titulaire du dernier diplôme obtenu",
+  title: "Titulaire du BTS SIO option SISR",
   description: "Développeur web passionné par la création d'expériences numériques élégantes et fonctionnelles. Spécialisé dans le développement front-end moderne avec une attention particulière portée au design et à l'expérience utilisateur.",
-  email: "alexandre.philip@example.com",
+  email: "alexandre@aleexp.fr",
   phone: "+33 6 12 34 56 78",
-  location: "Paris, France",
+  location: "Ansauvillers, France",
 };
 
 export const experiences = [
   {
-    id: 1,
+    id: 3,
     title: "Développeur Front-end Senior",
     company: "Tech Company",
     period: "2022 - Présent",
@@ -26,7 +26,7 @@ export const experiences = [
     technologies: ["JavaScript", "PHP", "MySQL", "Vue.js"]
   },
   {
-    id: 3,
+    id: 1,
     title: "Développeur Junior",
     company: "Start-up Innovante",
     period: "2019 - 2020",
@@ -37,9 +37,9 @@ export const experiences = [
 
 export const education = [
   {
-    id: 1,
-    degree: "Master en Développement Web",
-    institution: "École Supérieure d'Informatique",
+    id: 3,
+    degree: "BTS SIO [SISR]",
+    institution: "Chan",
     period: "2017 - 2019",
     description: "Spécialisation en développement web et applications mobiles. Projet de fin d'études sur les PWA.",
     isLatest: true
@@ -52,7 +52,7 @@ export const education = [
     description: "Formation fondamentale en informatique avec focus sur le développement logiciel."
   },
   {
-    id: 3,
+    id: 1,
     degree: "DUT Informatique",
     institution: "IUT de Paris",
     period: "2012 - 2014",

@@ -99,7 +99,7 @@ const Navigation = ({ isDarkMode, toggleDarkMode }) => {
                     }`}
                   >
                     {item.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-museum-900 dark:bg-museum-50 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-museum-900 dark:bg-museum-50 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </motion.div>
               ))}

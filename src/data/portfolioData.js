@@ -150,6 +150,6 @@ export const certifications = [
     issuer: "Web.dev",
     date: "2023",
     credentialId: "PERF-2023-006",
-    image: "/api/placeholder/100/100"
+    image: "/photos/certifications/intro-badge.png"
   }
 ];

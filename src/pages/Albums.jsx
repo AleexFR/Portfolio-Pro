@@ -57,7 +57,7 @@ const Albums = () => {
             variants={itemVariants}
             className="museum-text max-w-2xl mx-auto mb-8"
           >
-            Découvrez mes photographies à travers différentes collections
+            Decouvrez mes photographies à travers différentes collections
           </motion.p>
 
           <motion.div

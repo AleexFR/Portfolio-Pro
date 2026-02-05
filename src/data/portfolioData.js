@@ -39,23 +39,23 @@ export const education = [
   {
     id: 3,
     degree: "BTS SIO [SISR]",
-    institution: "Chan",
-    period: "2017 - 2019",
+    institution: "Lycée Jean Rostand, Chantilly",
+    period: "2023 - 2025",
     description: "Spécialisation en développement web et applications mobiles. Projet de fin d'études sur les PWA.",
     isLatest: true
   },
   {
     id: 2,
-    degree: "Licence Informatique",
-    institution: "Université de Technologie",
-    period: "2014 - 2017",
+    degree: "Baccalauréat Technologique [SIN]",
+    institution: "Lycée Paul Langevin, Beauvais",
+    period: "2019 - 2023",
     description: "Formation fondamentale en informatique avec focus sur le développement logiciel."
   },
   {
     id: 1,
-    degree: "DUT Informatique",
-    institution: "IUT de Paris",
-    period: "2012 - 2014",
+    degree: "Brevet des Collèges",
+    institution: "Collège Compère Morel, Breteuil",
+    period: "2018 - 2019",
     description: "Formation technique en informatique avec stages en entreprise."
   }
 ];

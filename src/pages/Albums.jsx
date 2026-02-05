@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Calendar, Camera, X } from 'lucide-react';
+import { Search, Calendar, Camera } from 'lucide-react';
 import { photosData } from '../data/photosData';
 
 const Albums = () => {
@@ -139,62 +139,49 @@ const Albums = () => {
         )}
 
         {selectedPhoto && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedPhoto(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-white dark:bg-museum-800 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative">
-                <button
-                  onClick={() => setSelectedPhoto(null)}
-                  className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-museum-700 rounded-full shadow-lg hover:bg-museum-100 dark:hover:bg-museum-600 transition-colors duration-300"
-                >
-                  <X className="w-5 h-5 text-museum-600 dark:text-museum-400" />
-                </button>
+          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+            <div className="bg-white dark:bg-museum-800 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden relative">
+              <button
+                onClick={() => setSelectedPhoto(null)}
+                className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-museum-700 rounded-full shadow-lg hover:bg-museum-100 dark:hover:bg-museum-600 transition-colors duration-300"
+              >
+                ×
+              </button>
+              
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-2/3">
+                  <img
+                    src={selectedPhoto.image}
+                    alt={selectedPhoto.title}
+                    className="w-full h-auto max-h-[60vh] object-cover"
+                    onError={(e) => {
+                      e.target.src = `https://picsum.photos/seed/${selectedPhoto.id}/800/600.jpg`;
+                    }}
+                  />
+                </div>
                 
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/3">
-                    <img
-                      src={selectedPhoto.image}
-                      alt={selectedPhoto.title}
-                      className="w-full h-auto max-h-[60vh] object-cover"
-                      onError={(e) => {
-                        e.target.src = `https://picsum.photos/seed/${selectedPhoto.id}/800/600.jpg`;
-                      }}
-                    />
+                <div className="md:w-1/3 p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-museum-900 dark:text-museum-50 mb-4">
+                      {selectedPhoto.title}
+                    </h3>
+                    <p className="text-museum-600 dark:text-museum-400 mb-6 leading-relaxed">
+                      {selectedPhoto.description}
+                    </p>
+                    <div className="flex items-center text-sm text-museum-500 dark:text-museum-500">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {selectedPhoto.date}
+                    </div>
                   </div>
                   
-                  <div className="md:w-1/3 p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold text-museum-900 dark:text-museum-50 mb-4">
-                        {selectedPhoto.title}
-                      </h3>
-                      <p className="text-museum-600 dark:text-museum-400 mb-6 leading-relaxed">
-                        {selectedPhoto.description}
-                      </p>
-                      <div className="flex items-center text-sm text-museum-500 dark:text-museum-500">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {selectedPhoto.date}
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6">
-                      <span className="inline-block px-3 py-1 bg-museum-100 dark:bg-museum-700 text-museum-700 dark:text-museum-300 text-sm font-medium rounded-full">
-                        {selectedPhoto.category}
-                      </span>
-                    </div>
+                  <div className="mt-6">
+                    <span className="inline-block px-3 py-1 bg-museum-100 dark:bg-museum-700 text-museum-700 dark:text-museum-300 text-sm font-medium rounded-full">
+                      {selectedPhoto.category}
+                    </span>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           )}
       </div>
     </section>

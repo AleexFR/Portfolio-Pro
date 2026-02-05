@@ -199,7 +199,7 @@ const Albums = () => {
                 </div>
               </motion.div>
             )}
-          </AnimatePresence>
+        </AnimatePresence>
       </div>
     </section>
   );

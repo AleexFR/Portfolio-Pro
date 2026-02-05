@@ -84,25 +84,6 @@ const Home = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16"
-        >
-          <Link
-            to="/contact"
-            className="px-6 py-3 border-2 border-museum-900 dark:border-museum-100 text-museum-900 dark:text-museum-100 rounded-none font-medium tracking-wide transition-all duration-300 hover:bg-museum-900 dark:hover:bg-museum-100 hover:text-museum-100 dark:hover:text-museum-900"
-          >
-            Me contacter
-          </Link>
-          
-          <Link
-            to="/projects"
-            className="px-6 py-3 border-2 border-museum-900 dark:border-museum-100 text-museum-900 dark:text-museum-100 rounded-none font-medium tracking-wide transition-all duration-300 hover:bg-museum-900 dark:hover:bg-museum-100 hover:text-museum-100 dark:hover:text-museum-900"
-          >
-            Voir mes projets
-          </Link>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
           className="mb-16"
         >
           <h3 className="text-sm font-medium tracking-widest text-museum-600 dark:text-museum-400 mb-6">

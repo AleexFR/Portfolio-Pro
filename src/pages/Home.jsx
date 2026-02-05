@@ -103,7 +103,18 @@ const Home = () => {
                 className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
               >
                 <div className="flex items-center space-x-2">
-                  <Award className="w-4 h-4 text-museum-600 dark:text-museum-400" />
+                  <div className="w-4 h-4 overflow-hidden rounded-full">
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
+                    <Award className="w-4 h-4 text-museum-600 dark:text-museum-400" style={{display: 'none'}} />
+                  </div>
                   <span className="text-xs font-medium text-museum-700 dark:text-museum-300">
                     {cert.name}
                   </span>

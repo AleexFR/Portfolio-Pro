@@ -146,10 +146,10 @@ export const certifications = [
   },
   {
     id: 6,
-    name: "Performance Optimization",
-    issuer: "Web.dev",
-    date: "2023",
-    credentialId: "PERF-2023-006",
+    name: "Introduction to Linux (LFS101)",
+    issuer: "The Linux Foundation",
+    date: "23 Avril 2025",
+    credentialId: "LF-06dbp4x506",
     image: "/photos/certifications/intro-badge.png"
   }
 ];

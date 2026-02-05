@@ -326,8 +326,15 @@ const Projects = () => {
                     rotate: [0, -2, 2, 0]
                   }}
                 >
-                  <div className="w-20 h-20 mx-auto mb-4 bg-museum-100 dark:bg-museum-700 rounded-full flex items-center justify-center group-hover:bg-museum-200 dark:group-hover:bg-museum-600 transition-colors duration-300">
-                    <Award className="w-10 h-10 text-museum-600 dark:text-museum-400" />
+                  <div className="w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.src = `https://picsum.photos/seed/${cert.id}/80/80.jpg`;
+                      }}
+                    />
                   </div>
                   
                   <h4 className="font-semibold text-museum-900 dark:text-museum-50 mb-2 text-sm group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors">

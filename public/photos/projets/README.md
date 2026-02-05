@@ -13,10 +13,13 @@ Ce dossier contient les photos de vos projets.
 {
   id: 1,
   title: "Nom du projet",
-  description: "Description détaillée du projet",
-  image: "/photos/projets/nom-du-fichier.jpg",
-  category: "Projets",
-  date: "2024-01-15"
+  description: "Description du projet",
+  image: "/photos/projets/image.png",
+  technologies: ["HTML", "CSS"],
+  features: ["Fonctionnalité 1", "Fonctionnalité 2"],
+  liveUrl: "https://exemple.com",
+  githubUrl: "https://github.com/utilisateur/projet",
+  pdfUrl: "/documents/projet-documentation.pdf"  // ← Nouveau champ
 }
 ```
 

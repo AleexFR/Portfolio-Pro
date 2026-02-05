@@ -68,7 +68,7 @@ export const projects = [
     image: "/photos/projets/screen-quantique.png",
     technologies: ["HTML", "CSS"],
     features: ["Formulaire de contact", "Tableau"],
-    liveUrl: "https://quantique.aleexp.fr",
+    liveUrl: "https://aleexfr.github.io/Site-Physique-Quantique/",
     githubUrl: "https://github.com/AleexFR/Site-Physique-Quantique"
   }
 ];

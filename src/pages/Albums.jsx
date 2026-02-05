@@ -6,7 +6,6 @@ import { photosData } from '../data/photosData';
 const Albums = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredPhotos, setFilteredPhotos] = useState(photosData);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
     const filtered = photosData.filter(photo =>
@@ -39,14 +38,6 @@ const Albums = () => {
     }
   };
 
-  const openModal = (photo) => {
-    setSelectedPhoto(photo);
-  };
-
-  const closeModal = () => {
-    setSelectedPhoto(null);
-  };
-
   return (
     <section className="min-h-screen py-20 bg-museum-50 dark:bg-museum-900">
       <div className="museum-container">
@@ -65,7 +56,7 @@ const Albums = () => {
             variants={itemVariants}
             className="museum-text max-w-2xl mx-auto mb-8"
           >
-            Decouvrez mes photographies a travers differentes collections
+            Découvrez mes photographies à travers différentes collections
           </motion.p>
 
           <motion.div
@@ -97,12 +88,11 @@ const Albums = () => {
               key={photo.id}
               variants={itemVariants}
               custom={index}
-              className="museum-card group overflow-hidden cursor-pointer"
+              className="museum-card group overflow-hidden"
               whileHover={{ 
                 y: -8,
                 boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
               }}
-              onClick={() => openModal(photo)}
             >
               <div className="aspect-square bg-museum-200 dark:bg-museum-700 relative overflow-hidden rounded-lg">
                 <img
@@ -141,56 +131,10 @@ const Albums = () => {
             className="text-center py-12"
           >
             <p className="text-museum-600 dark:text-museum-400">
-              Aucune photo trouvee pour "{searchTerm}"
+              Aucune photo trouvée pour "{searchTerm}"
             </p>
           </motion.div>
         )}
-
-        {selectedPhoto && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
-            <div className="bg-white dark:bg-museum-800 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden relative">
-              <button
-                onClick={closeModal}
-                className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-museum-700 rounded-full shadow-lg hover:bg-museum-100 dark:hover:bg-museum-600 transition-colors duration-300"
-              >
-                ×
-              </button>
-              
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-2/3">
-                  <img
-                    src={selectedPhoto.image}
-                    alt={selectedPhoto.title}
-                    className="w-full h-auto max-h-[60vh] object-cover"
-                    onError={(e) => {
-                      e.target.src = `https://picsum.photos/seed/${selectedPhoto.id}/800/600.jpg`;
-                    }}
-                  />
-                </div>
-                
-                <div className="md:w-1/3 p-6 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-museum-900 dark:text-museum-50 mb-4">
-                      {selectedPhoto.title}
-                    </h3>
-                    <p className="text-museum-600 dark:text-museum-400 mb-6 leading-relaxed">
-                      {selectedPhoto.description}
-                    </p>
-                    <div className="flex items-center text-sm text-museum-500 dark:text-museum-500">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {selectedPhoto.date}
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6">
-                    <span className="inline-block px-3 py-1 bg-museum-100 dark:bg-museum-700 text-museum-700 dark:text-museum-300 text-sm font-medium rounded-full">
-                      {selectedPhoto.category}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
       </div>
     </section>
   );

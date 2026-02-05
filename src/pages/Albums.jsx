@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Calendar, Camera } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Search, Calendar, Camera } from 'lucide-react';
 import { photosData } from '../data/photosData';
 
 const Albums = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [filteredPhotos, setFilteredPhotos] = useState(photosData);
 
   useEffect(() => {
@@ -35,44 +34,6 @@ const Albums = () => {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
-  };
-
-  const modalVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut"
-      }
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeIn"
-      }
-    }
-  };
-
-  const modalContentVariants = {
-    hidden: { scale: 0.8, y: 50 },
-    visible: {
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut"
-      }
-    },
-    exit: {
-      scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.3,
-        ease: "easeIn"
       }
     }
   };
@@ -127,12 +88,11 @@ const Albums = () => {
               key={photo.id}
               variants={itemVariants}
               custom={index}
-              className="museum-card group cursor-pointer overflow-hidden"
+              className="museum-card group overflow-hidden"
               whileHover={{ 
                 y: -8,
                 boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
               }}
-              onClick={() => setSelectedPhoto(photo)}
             >
               <div className="aspect-square bg-museum-200 dark:bg-museum-700 relative overflow-hidden rounded-lg">
                 <img
@@ -176,71 +136,6 @@ const Albums = () => {
           </motion.div>
         )}
       </div>
-
-      <AnimatePresence>
-        {selectedPhoto && (
-          <motion.div
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-            onClick={() => setSelectedPhoto(null)}
-          >
-            <motion.div
-              variants={modalContentVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="bg-white dark:bg-museum-800 max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative">
-                <button
-                  onClick={() => setSelectedPhoto(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-white/80 dark:bg-museum-700/80 hover:bg-white dark:hover:bg-museum-700 transition-colors duration-300 z-10"
-                >
-                  <X className="w-6 h-6 text-museum-900 dark:text-museum-50" />
-                </button>
-                
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="aspect-square bg-museum-200 dark:bg-museum-700 relative overflow-hidden">
-                    <img
-                      src={selectedPhoto.image}
-                      alt={selectedPhoto.title}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.src = `https://picsum.photos/seed/${selectedPhoto.id}/800/800.jpg`;
-                      }}
-                    />
-                  </div>
-                  
-                  <div className="p-8 flex flex-col justify-center">
-                    <h3 className="museum-title mb-4">
-                      {selectedPhoto.title}
-                    </h3>
-                    
-                    <p className="museum-text mb-6 text-lg leading-relaxed">
-                      {selectedPhoto.description}
-                    </p>
-                    
-                    <div className="space-y-4">
-                      <div className="flex items-center text-museum-600 dark:text-museum-400">
-                        <Calendar className="w-5 h-5 mr-3" />
-                        <span>{selectedPhoto.date}</span>
-                      </div>
-                      
-                      <div className="flex items-center text-museum-600 dark:text-museum-400">
-                        <Camera className="w-5 h-5 mr-3" />
-                        <span>{selectedPhoto.category}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
     </section>
   );
 };

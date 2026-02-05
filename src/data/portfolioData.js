@@ -23,7 +23,7 @@ export const experiences = [
     company: "Centre hospitalier Simone Veil, Beauvais",
     period: "6 Janv - 14 Fév 2025",
     description: "Interventions dans les différents services de l'hôpital pour résoudre les problèmes informatiques. Création du projet Pandora-BOX.",
-    technologies: ["Assiatnce", "Pandora-BOX"]
+    technologies: ["Assistance", "Pandora-BOX"]
   },
   {
     id: 1,
@@ -70,6 +70,14 @@ export const projects = [
     features: ["Formulaire de contact", "Tableau"],
     liveUrl: "https://aleexfr.github.io/Site-Physique-Quantique/",
     githubUrl: "https://github.com/AleexFR/Site-Physique-Quantique"
+  },
+  {
+    id: 2,
+    title: "Crackage Wi-Fi et Test de Sécurité sur Base de Données",
+    description: "Exercices pratiques de pentesting : Wifite contre WEP et Hydra sur MySQL.",
+    image: "/photos/projets/wifite.jpeg",
+    technologies: ["Hydra", "Wifite", "MySQL"],
+    features: ["Crackage", "Test de Sécurité"]
   }
 ];
 

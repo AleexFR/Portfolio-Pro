@@ -184,7 +184,7 @@ const Home = () => {
 
         {/* Floating Latest Project Tab */}
         <motion.div
-          className="fixed top-24 right-8 z-30"
+          className="fixed top-24 right-8 z-30 w-20"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -192,23 +192,27 @@ const Home = () => {
         >
           <Link
             to="/projects"
-            className="group flex items-center space-x-3 px-4 py-3 bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="group block bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-3"
           >
-            {latestProject && (
-              <img
-                src={latestProject.image}
-                alt={latestProject.title}
-                className="w-8 h-8 object-cover rounded-md"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextElementSibling.style.display = 'block';
-                }}
-              />
-            )}
-            <FolderOpen className="w-4 h-4 text-museum-600 dark:text-museum-400 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors" style={{display: latestProject ? 'none' : 'block'}} />
-            <span className="text-sm font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors">
-              {latestProject ? latestProject.title : 'Projets'}
-            </span>
+            <div className="text-center">
+              {latestProject && (
+                <img
+                  src={latestProject.image}
+                  alt={latestProject.title}
+                  className="w-12 h-12 object-cover rounded-md mx-auto mb-2"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'block';
+                  }}
+                />
+              )}
+              <FolderOpen className="w-4 h-4 text-museum-600 dark:text-museum-400 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors" style={{display: latestProject ? 'none' : 'block'}} />
+            </div>
+            <div className="text-center">
+              <span className="text-xs font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors block">
+                {latestProject ? latestProject.title : 'Projets'}
+              </span>
+            </div>
           </Link>
         </motion.div>
 

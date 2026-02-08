@@ -20,6 +20,12 @@ Ce dossier contient les photos pour vos albums personnels et créatifs.
 }
 ```
 
+## Nouveautés
+
+- **Support multi-dates** : Les expériences et formations peuvent maintenant avoir plusieurs périodes
+- **Boutons conditionnels** : Les boutons Live Demo, GitHub et PDF n'apparaissent que si les URLs sont définies
+- **Section diplômes** : Nouvelle section sur la page d'accueil pour afficher les diplômes obtenus
+
 ## Catégories possibles
 
 - Architecture

@@ -5,20 +5,26 @@ Ce dossier contient les photos de vos certifications.
 ## Comment ajouter des photos
 
 1. Placez vos images de certifications dans ce dossier
-2. Mettez à jour le fichier `src/data/photosData.js` avec les informations
+2. Mettez à jour le fichier `src/data/portfolioData.js` avec les informations
 
-## Exemple de structure dans photosData.js
+## Exemple de structure dans portfolioData.js
 
 ```javascript
 {
   id: 2,
-  title: "Certification React",
-  description: "Certification obtenue après validation des compétences avancées en React",
-  image: "/photos/certifications/react-cert.jpg",
-  category: "Certifications",
-  date: "2024-01-10"
+  name: "Certification React",
+  issuer: "Organisme émetteur",
+  date: "10 Janvier 2024",
+  credentialId: "ID-123456",
+  image: "/photos/certifications/react-cert.jpg"
 }
 ```
+
+## Nouveautés
+
+- **Support multi-dates** : Les expériences et formations peuvent maintenant avoir plusieurs périodes
+- **Boutons conditionnels** : Les boutons Live Demo, GitHub et PDF n'apparaissent que si les URLs sont définies
+- **Section diplômes** : Nouvelle section sur la page d'accueil pour afficher les diplômes obtenus
 
 ## Recommandations
 

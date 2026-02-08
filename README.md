@@ -21,12 +21,14 @@ Un portfolio moderne et haut de gamme développé en React avec une direction ar
 - Présentation personnelle avec nom et signature
 - Affichage dynamique du dernier diplôme
 - Badges de certifications visibles
+- **Nouveau : Section "Diplômes obtenus"** avec liste chronologique
 - Navigation fluide vers les autres sections
 
 ### À propos
 - Description personnelle détaillée
 - Expériences professionnelles chronologiques
 - Formations et diplômes avec mise en avant du dernier obtenu
+- **Nouveau : Support multi-dates** pour expériences et formations
 - Design en cartes avec animations subtiles
 
 ### Projets & Certifications
@@ -91,10 +93,83 @@ src/
 │   ├── Contact.jsx
 │   └── Footer.jsx
 ├── data/               # Données statiques
-│   └── portfolioData.js
+│   └── portfolioData.js # Contient experiences, education, diplomas, projects, certifications
+├── pages/              # Pages principales
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   └── Contact.jsx
 ├── App.jsx             # Composant principal
 ├── main.jsx            # Point d'entrée
 └── index.css           # Styles globaux
+```
+
+## 📊 Structure des données
+
+### `portfolioData.js`
+
+```javascript
+// Expériences professionnelles (support multi-dates)
+export const experiences = [
+  {
+    id: 1,
+    title: "Titre du poste",
+    company: "Nom de l'entreprise",
+    periods: ["Juin 2024", "Septembre 2024"], // Tableau de périodes
+    description: "Description de l'expérience",
+    technologies: ["Tech1", "Tech2"]
+  }
+];
+
+// Formations (support multi-dates)
+export const education = [
+  {
+    id: 1,
+    degree: "Nom du diplôme",
+    institution: "Établissement",
+    periods: ["2019 - 2023", "2023 - 2025"], // Tableau de périodes
+    description: "Description de la formation",
+    isLatest: true/false
+  }
+];
+
+// Diplômes obtenus (id 1 = plus ancien)
+export const diplomas = [
+  {
+    id: 1,
+    name: "Brevet des Collèges",
+    institution: "Collège X",
+    date: "2019",
+    description: "Description du diplôme"
+  }
+];
+
+// Projets
+export const projects = [
+  {
+    id: 1,
+    title: "Titre du projet",
+    description: "Description",
+    image: "/chemin/image.jpg",
+    technologies: ["Tech1", "Tech2"],
+    features: ["Fonctionnalité 1", "Fonctionnalité 2"],
+    liveUrl: "https://exemple.com", // Optionnel
+    githubUrl: "https://github.com/user/repo", // Optionnel
+    pdfUrl: "/chemin/document.pdf" // Optionnel
+  }
+];
+
+// Certifications
+export const certifications = [
+  {
+    id: 1,
+    name: "Nom de la certification",
+    issuer: "Organisme émetteur",
+    date: "Date d'obtention",
+    credentialId: "ID de la certification",
+    image: "/chemin/badge.png"
+  }
+];
 ```
 
 ## 🎨 Personnalisation

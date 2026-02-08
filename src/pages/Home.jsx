@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, MapPin, ExternalLink, Award, GraduationCap } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, ExternalLink, Award, GraduationCap, FolderOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { personalInfo, education, certifications, diplomas } from '../data/portfolioData';
 
@@ -82,7 +82,7 @@ const Home = () => {
           {personalInfo.description}
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           <motion.div
             variants={itemVariants}
             className="mb-8"
@@ -173,45 +173,26 @@ const Home = () => {
               ))}
             </div>
           </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="mb-8"
-          >
-            <h3 className="text-sm font-medium tracking-widest text-museum-600 dark:text-museum-400 mb-6">
-              DERNIER PROJET
-            </h3>
-            <motion.div
-              variants={certificationVariants}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-museum-100 dark:bg-museum-700 rounded-lg overflow-hidden flex-shrink-0">
-                  <img
-                    src={projects[0]?.image}
-                    alt={projects[0]?.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = `https://picsum.photos/seed/latest-project/48/48.jpg`;
-                    }}
-                  />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-sm font-semibold text-museum-900 dark:text-museum-50 mb-1">
-                    {projects[0]?.title}
-                  </h4>
-                  <p className="text-xs text-museum-500 dark:text-museum-500">
-                    Dernière mise à jour
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
         </div>
+
+        {/* Floating Projects Tab */}
+        <motion.div
+          className="fixed top-24 right-8 z-30"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Link
+            to="/projects"
+            className="group flex items-center space-x-2 px-4 py-3 bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <FolderOpen className="w-4 h-4 text-museum-600 dark:text-museum-400 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors" />
+            <span className="text-sm font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors">
+              Projets
+            </span>
+          </Link>
+        </motion.div>
 
         <motion.div
           variants={itemVariants}

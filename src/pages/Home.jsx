@@ -184,11 +184,11 @@ const Home = () => {
 
         {/* Floating Latest Project Tab */}
         <motion.div
-          className="fixed top-24 right-8 z-30 w-20"
+          className="fixed top-24 right-8 z-30"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, width: 'w-24' }}
         >
           <Link
             to="/projects"
@@ -199,7 +199,7 @@ const Home = () => {
                 <img
                   src={latestProject.image}
                   alt={latestProject.title}
-                  className="w-12 h-12 object-cover rounded-md mx-auto mb-2"
+                  className="w-16 h-16 object-cover rounded-md mx-auto mb-2"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextElementSibling.style.display = 'block';
@@ -209,7 +209,7 @@ const Home = () => {
               <FolderOpen className="w-4 h-4 text-museum-600 dark:text-museum-400 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors" style={{display: latestProject ? 'none' : 'block'}} />
             </div>
             <div className="text-center">
-              <span className="text-xs font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors block">
+              <span className="text-sm font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors block">
                 {latestProject ? latestProject.title : 'Projets'}
               </span>
             </div>

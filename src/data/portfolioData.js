@@ -10,7 +10,7 @@ export const personalInfo = {
 
 export const experiences = [
   {
-    id: 3,
+    id: 4,
     title: "Employé Polyvalent",
     company: "McDonald's, Ressons-sur-Matz",
     periods: ["Juillet 2025"],
@@ -18,7 +18,7 @@ export const experiences = [
     technologies: ["CLAM", "SAT", "Frites", "UHC"]
   },
   {
-    id: 2,
+    id: 3,
     title: "Stagiaire Informatique",
     company: "Centre hospitalier Simone Veil, Beauvais",
     periods: ["6 Janv - 14 Fév 2025"],
@@ -26,10 +26,18 @@ export const experiences = [
     technologies: ["Assistance", "Pandora-BOX"]
   },
   {
-    id: 1,
+    id: 2,
     title: "Stagiaire Informatique",
     company: "Conseil départemental de l'Oise, Beauvais",
     periods: ["Juin 2024"],
+    description: "Interventions dans les différents collèges de l'Oise pour changer les équipements informatiques.",
+    technologies: ["Maintenance"]
+  },
+  {
+    id: 1,
+    title: "Employé Territorial",
+    company: "Mairie d'Ansauvillers, Ansauvillers",
+    periods: ["Juillet 2021", "Août 2022", "Juillet & Août 2023", "Vac Pâques 2024 (2 Semaines)", "Vac Pâques 2025 (1 Semaine)"],
     description: "Interventions dans les différents collèges de l'Oise pour changer les équipements informatiques.",
     technologies: ["Maintenance"]
   }

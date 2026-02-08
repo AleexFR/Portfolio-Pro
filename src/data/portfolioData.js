@@ -13,15 +13,15 @@ export const experiences = [
     id: 3,
     title: "Employé Polyvalent",
     company: "McDonald's, Ressons-sur-Matz",
-    period: "Juillet 2025",
-    description: "Cette expérience m’a permis de développer mon sens du service client, ma réactivité et ma capacité à travailler en équipe dans un environnement rapide.",
+    periods: ["Juillet 2025"],
+    description: "Cette expérience m'a permis de développer mon sens du service client, ma réactivité et ma capacité à travailler en équipe dans un environnement rapide.",
     technologies: ["CLAM", "SAT", "Frites", "UHC"]
   },
   {
     id: 2,
     title: "Stagiaire Informatique",
     company: "Centre hospitalier Simone Veil, Beauvais",
-    period: "6 Janv - 14 Fév 2025",
+    periods: ["6 Janv - 14 Fév 2025"],
     description: "Interventions dans les différents services de l'hôpital pour résoudre les problèmes informatiques. Création du projet Pandora-BOX.",
     technologies: ["Assistance", "Pandora-BOX"]
   },
@@ -29,7 +29,7 @@ export const experiences = [
     id: 1,
     title: "Stagiaire Informatique",
     company: "Conseil départemental de l'Oise, Beauvais",
-    period: "Juin 2024",
+    periods: ["Juin 2024"],
     description: "Interventions dans les différents collèges de l'Oise pour changer les équipements informatiques.",
     technologies: ["Maintenance"]
   }
@@ -40,7 +40,7 @@ export const education = [
     id: 3,
     degree: "BTS SIO [SISR]",
     institution: "Lycée Jean Rostand, Chantilly",
-    period: "2023 - 2025",
+    periods: ["2023 - 2025"],
     description: "Spécialisation en développement web et applications mobiles. Projet de fin d'études sur les PWA.",
     isLatest: true
   },
@@ -48,15 +48,39 @@ export const education = [
     id: 2,
     degree: "Baccalauréat Technologique [SIN]",
     institution: "Lycée Paul Langevin, Beauvais",
-    period: "2019 - 2023",
+    periods: ["2019 - 2023"],
     description: "Formation fondamentale en informatique avec focus sur le développement logiciel."
   },
   {
     id: 1,
     degree: "Brevet des Collèges",
     institution: "Collège Compère Morel, Breteuil",
-    period: "2018 - 2019",
+    periods: ["2018 - 2019"],
     description: "Formation technique en informatique avec stages en entreprise."
+  }
+];
+
+export const diplomas = [
+  {
+    id: 1,
+    name: "Brevet des Collèges",
+    institution: "Collège Compère Morel, Breteuil",
+    date: "2019",
+    description: "Diplôme national du brevet avec mention"
+  },
+  {
+    id: 2,
+    name: "Baccalauréat Technologique [SIN]",
+    institution: "Lycée Paul Langevin, Beauvais",
+    date: "2023",
+    description: "Baccalauréat Sciences de l'Ingénieur spécialité Numérique et Sciences Informatiques"
+  },
+  {
+    id: 3,
+    name: "BTS SIO [SISR]",
+    institution: "Lycée Jean Rostand, Chantilly",
+    date: "2025",
+    description: "Brevet de Technicien Supérieur Services Informatiques aux Organisations option Solutions d'Infrastructure, Systèmes et Réseaux"
   }
 ];
 

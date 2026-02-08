@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, Phone, MapPin, ExternalLink, Award } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, ExternalLink, Award, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { personalInfo, education, certifications } from '../data/portfolioData';
+import { personalInfo, education, certifications, diplomas } from '../data/portfolioData';
 
 const Home = () => {
   const [latestDegree, setLatestDegree] = useState('');
@@ -82,47 +82,89 @@ const Home = () => {
           {personalInfo.description}
         </motion.p>
 
-        <motion.div
-          variants={itemVariants}
-          className="mb-16"
-        >
-          <h3 className="text-sm font-medium tracking-widest text-museum-600 dark:text-museum-400 mb-6">
-            CERTIFICATIONS PRINCIPALES
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {certifications.slice(0, 6).map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                variants={certificationVariants}
-                custom={index}
-                whileHover={{ 
-                  scale: 1.1,
-                  rotate: [0, -5, 5, 0],
-                  transition: { duration: 0.3 }
-                }}
-                className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
-              >
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 overflow-hidden rounded">
-                    <img
-                      src={cert.image}
-                      alt={cert.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextElementSibling.style.display = 'block';
-                      }}
-                    />
-                    <Award className="w-4 h-4 text-museum-600 dark:text-museum-400" style={{display: 'none'}} />
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <motion.div
+            variants={itemVariants}
+            className="mb-8"
+          >
+            <h3 className="text-sm font-medium tracking-widest text-museum-600 dark:text-museum-400 mb-6">
+              CERTIFICATIONS PRINCIPALES
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {certifications.slice(0, 6).map((cert, index) => (
+                <motion.div
+                  key={cert.id}
+                  variants={certificationVariants}
+                  custom={index}
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: [0, -5, 5, 0],
+                    transition: { duration: 0.3 }
+                  }}
+                  className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
+                >
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 overflow-hidden rounded">
+                      <img
+                        src={cert.image}
+                        alt={cert.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextElementSibling.style.display = 'block';
+                        }}
+                      />
+                      <Award className="w-4 h-4 text-museum-600 dark:text-museum-400" style={{display: 'none'}} />
+                    </div>
+                    <span className="text-xs font-medium text-museum-700 dark:text-museum-300">
+                      {cert.name}
+                    </span>
                   </div>
-                  <span className="text-xs font-medium text-museum-700 dark:text-museum-300">
-                    {cert.name}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="mb-8"
+          >
+            <h3 className="text-sm font-medium tracking-widest text-museum-600 dark:text-museum-400 mb-6">
+              DIPLÔMES OBTENUS
+            </h3>
+            <div className="space-y-3">
+              {diplomas.map((diploma, index) => (
+                <motion.div
+                  key={diploma.id}
+                  variants={certificationVariants}
+                  custom={index}
+                  whileHover={{ 
+                    x: 5,
+                    transition: { duration: 0.2 }
+                  }}
+                  className="bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-museum-100 dark:bg-museum-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <GraduationCap className="w-4 h-4 text-museum-600 dark:text-museum-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-sm font-semibold text-museum-900 dark:text-museum-50 mb-1">
+                        {diploma.name}
+                      </h4>
+                      <p className="text-xs text-museum-600 dark:text-museum-400 mb-1">
+                        {diploma.institution}
+                      </p>
+                      <p className="text-xs text-museum-500 dark:text-museum-500">
+                        {diploma.date}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           variants={itemVariants}

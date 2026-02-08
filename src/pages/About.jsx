@@ -101,7 +101,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center text-museum-500 dark:text-museum-500 text-sm mt-2 md:mt-0">
                       <Calendar className="w-4 h-4 mr-2" />
-                      {exp.period}
+                      {exp.periods.join(', ')}
                     </div>
                   </div>
                   
@@ -173,7 +173,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center text-museum-500 dark:text-museum-500 text-sm mt-2 md:mt-0">
                       <Calendar className="w-4 h-4 mr-2" />
-                      {edu.period}
+                      {edu.periods.join(', ')}
                     </div>
                   </div>
                   

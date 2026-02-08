@@ -99,9 +99,15 @@ const About = () => {
                         {exp.company}
                       </p>
                     </div>
-                    <div className="flex items-center text-museum-500 dark:text-museum-500 text-sm mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {exp.periods.join(', ')}
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
+                      <div className="flex flex-col space-y-1">
+                        {exp.periods.map((period, periodIndex) => (
+                          <span key={periodIndex} className="text-museum-500 dark:text-museum-500 text-sm">
+                            {period}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   
@@ -171,9 +177,15 @@ const About = () => {
                         {edu.institution}
                       </p>
                     </div>
-                    <div className="flex items-center text-museum-500 dark:text-museum-500 text-sm mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {edu.periods.join(', ')}
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
+                      <div className="flex flex-col space-y-1">
+                        {edu.periods.map((period, periodIndex) => (
+                          <span key={periodIndex} className="text-museum-500 dark:text-museum-500 text-sm">
+                            {period}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   

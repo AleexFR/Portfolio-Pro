@@ -39,7 +39,7 @@ export const experiences = [
     company: "Mairie d'Ansauvillers, Ansauvillers",
     periods: ["Juillet 2021", "Août 2022", "Juillet & Août 2023", "Vac Pâques 2024 (2 Semaines)", "Vac Pâques 2025 (1 Semaine)"],
     description: "Interventions dans les différents collèges de l'Oise pour changer les équipements informatiques.",
-    technologies: ["Maintenance"]
+    technologies: ["Débroussailleuse", "Tondeuse", "Désherbage"]
   }
 ];
 

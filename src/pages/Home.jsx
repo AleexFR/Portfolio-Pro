@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, MapPin, ExternalLink, Award, GraduationCap, FolderOpen } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, ExternalLink, Award, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { personalInfo, education, certifications, diplomas, projects } from '../data/portfolioData';
+import { personalInfo, education, certifications, diplomas } from '../data/portfolioData';
 
 const Home = () => {
   const [latestDegree, setLatestDegree] = useState('');
-  const [latestProject, setLatestProject] = useState(null);
 
   useEffect(() => {
     const latest = education.find(edu => edu.isLatest);
     if (latest) {
       setLatestDegree(latest.degree);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (projects.length > 0) {
-      setLatestProject(projects[projects.length - 1]); // Dernier projet
     }
   }, []);
 
@@ -181,40 +174,6 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Floating Latest Project Tab */}
-        <motion.div
-          className="fixed top-24 right-8 z-30"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <Link
-            to="/projects"
-            className="group block bg-white dark:bg-museum-800 border border-museum-200 dark:border-museum-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-3"
-          >
-            <div className="text-center">
-              {latestProject && (
-                <img
-                  src={latestProject.image}
-                  alt={latestProject.title}
-                  className="w-16 h-16 object-cover rounded-md mx-auto mb-2"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'block';
-                  }}
-                />
-              )}
-              <FolderOpen className="w-4 h-4 text-museum-600 dark:text-museum-400 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors" style={{display: latestProject ? 'none' : 'block'}} />
-            </div>
-            <div className="text-center">
-              <span className="text-sm font-medium text-museum-700 dark:text-museum-300 group-hover:text-museum-900 dark:group-hover:text-museum-50 transition-colors block">
-                {latestProject ? latestProject.title : 'Projets'}
-              </span>
-            </div>
-          </Link>
-        </motion.div>
 
         <motion.div
           variants={itemVariants}

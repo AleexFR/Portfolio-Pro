@@ -91,7 +91,7 @@ const Home = () => {
               CERTIFICATIONS PRINCIPALES
             </h3>
             <div className="space-y-3">
-              {certifications.slice(0, 6).map((cert, index) => (
+              {[...certifications].reverse().slice(0, 6).map((cert, index) => (
                 <motion.div
                   key={cert.id}
                   variants={certificationVariants}
@@ -142,7 +142,7 @@ const Home = () => {
               DIPLÔMES OBTENUS
             </h3>
             <div className="space-y-3">
-              {diplomas.map((diploma, index) => (
+              {[...diplomas].reverse().map((diploma, index) => (
                 <motion.div
                   key={diploma.id}
                   variants={certificationVariants}

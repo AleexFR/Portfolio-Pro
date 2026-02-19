@@ -49,13 +49,15 @@ export const education = [
     degree: "Bachelor Chef de Projet Développement et Data",
     institution: "La Manu, Amiens",
     periods: ["2026 - 2027"],
-    description: "Spécialisation en architecture Fullstack et intégration de solutions d'IA. Pilotage de projets agiles et sécurisation d'applications web.",
+    rhythm: "Alternance 1 semaine école / 3 semaines entreprise",
+    description: "Spécialisation en architecture Fullstack et intégration de solutions d'IA. Pilotage de projets agiles et sécurisation d'applications web."
   },
   {
     id: 3,
     degree: "BTS SIO [SISR]",
     institution: "Lycée Jean Rostand, Chantilly",
     periods: ["2023 - 2025"],
+    rhythm: "Présentiel",
     description: "Spécialisation en développement web et applications mobiles. Projet de fin d'études sur les PWA.",
     isLatest: true
   },
@@ -64,6 +66,7 @@ export const education = [
     degree: "Baccalauréat Technologique [SIN]",
     institution: "Lycée Paul Langevin, Beauvais",
     periods: ["2019 - 2023"],
+    rhythm: "Présentiel",
     description: "Formation fondamentale en informatique avec focus sur le développement logiciel."
   },
   {
@@ -71,6 +74,7 @@ export const education = [
     degree: "Brevet des Collèges",
     institution: "Collège Compère Morel, Breteuil",
     periods: ["2018 - 2019"],
+    rhythm: "Présentiel",
     description: "Formation technique en informatique avec stages en entreprise."
   }
 ];

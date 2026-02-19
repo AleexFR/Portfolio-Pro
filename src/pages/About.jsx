@@ -176,6 +176,11 @@ const About = () => {
                       <p className="text-museum-600 dark:text-museum-400 font-medium">
                         {edu.institution}
                       </p>
+                      {edu.rhythm && (
+                        <p className="text-xs text-museum-500 dark:text-museum-500 mt-1">
+                          <span className="font-medium">Rythme :</span> {edu.rhythm}
+                        </p>
+                      )}
                     </div>
                     <div className="flex items-start space-x-3">
                       <Calendar className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />

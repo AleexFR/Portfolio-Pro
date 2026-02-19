@@ -169,7 +169,7 @@ const About = () => {
                   )}
                   
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
+                    <div className="flex-1">
                       <h4 className="text-xl font-semibold text-museum-900 dark:text-museum-50 mb-2 group-hover:text-museum-700 dark:group-hover:text-museum-300 transition-colors">
                         {edu.degree}
                       </h4>
@@ -182,7 +182,7 @@ const About = () => {
                         </p>
                       )}
                     </div>
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start space-x-3 flex-shrink-0">
                       <Calendar className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
                       <div className="flex flex-col space-y-1">
                         {edu.periods.map((period, periodIndex) => (

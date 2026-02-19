@@ -50,7 +50,7 @@ export const education = [
     institution: "La Manu, Amiens",
     periods: ["2026 - 2027"],
     rhythm: "Alternance 1 semaine école / 3 semaines entreprise",
-    description: "Expertise en administration systèmes et réseaux. Mise en œuvre, sécurisation et maintenance des infrastructures informatiques en entreprise."
+    description: "Spécialisation en architecture Fullstack et intégration de solutions d'IA. Pilotage de projets agiles et sécurisation d'applications web."
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ export const education = [
     institution: "Lycée Paul Langevin, Beauvais",
     periods: ["2019 - 2023"],
     rhythm: "Présentiel",
-    description: "Formation fondamentale en informatique avec focus sur le développement logiciel."
+    description: "Spécialisation en Systèmes d'Information et Numérique. Apprentissage des bases de l'algorithmique, de la programmation et de la gestion des flux de données."
   },
   {
     id: 1,

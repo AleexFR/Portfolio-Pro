@@ -50,7 +50,7 @@ export const education = [
     institution: "La Manu, Amiens",
     periods: ["2026 - 2027"],
     rhythm: "Alternance 1 semaine école / 3 semaines entreprise",
-    description: "Spécialisation en architecture Fullstack et intégration de solutions d'IA. Pilotage de projets agiles et sécurisation d'applications web."
+    description: "Expertise en administration systèmes et réseaux. Mise en œuvre, sécurisation et maintenance des infrastructures informatiques en entreprise."
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ export const education = [
     institution: "Lycée Jean Rostand, Chantilly",
     periods: ["2023 - 2025"],
     rhythm: "Présentiel",
-    description: "Spécialisation en développement web et applications mobiles. Projet de fin d'études sur les PWA.",
+    description: "Expertise en administration systèmes et réseaux. Mise en œuvre, sécurisation et maintenance des infrastructures informatiques en entreprise.",
     isLatest: true
   },
   {

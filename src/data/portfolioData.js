@@ -45,6 +45,13 @@ export const experiences = [
 
 export const education = [
   {
+    id: 4,
+    degree: "Bachelor Chef de Projet Développement et Data",
+    institution: "La Manu, Amiens",
+    periods: ["2026 - 2027"],
+    description: "Spécialisation en architecture Fullstack et intégration de solutions d'IA. Pilotage de projets agiles et sécurisation d'applications web.",
+  },
+  {
     id: 3,
     degree: "BTS SIO [SISR]",
     institution: "Lycée Jean Rostand, Chantilly",

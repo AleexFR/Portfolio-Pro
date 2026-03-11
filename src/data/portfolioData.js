@@ -11,6 +11,14 @@ export const personalInfo = {
 export const experiences = [
   {
     id: 4,
+    title: "Employé de rayon",
+    company: "E.Leclerc, Breteuil",
+    periods: ["9 au 15 Mars 2026"],
+    description: "Cette expérience m'a permis de développer mon organisation, ma rigueur et mon sens du travail en équipe à travers la mise en rayon et la gestion des stocks.",
+    technologies: ["Mise en rayon", "Gestion des stocks", "Facing", "Manutention"]
+  },
+  {
+    id: 4,
     title: "Employé Polyvalent",
     company: "McDonald's, Ressons-sur-Matz",
     periods: ["Juillet 2025"],

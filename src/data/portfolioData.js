@@ -10,7 +10,15 @@ export const personalInfo = {
 
 export const experiences = [
   {
-    id: 4,
+    id: 6,
+    title: "Intérim Manutentionnaire",
+    company: "Flexico, Maignelay-Montigny",
+    periods: ["30 Mars - 30 Avril 2026"],
+    description: "",
+    technologies: ["Qualité", "Ferrets", "Sac plastique", "Manutention"]
+  },
+  {
+    id: 5,
     title: "Employé de rayon",
     company: "E.Leclerc, Breteuil",
     periods: ["9 au 15 Mars 2026"],
@@ -129,6 +137,15 @@ export const projects = [
     image: "/photos/projets/wifite.jpeg",
     technologies: ["Hydra", "Wifite", "MySQL"],
     features: ["Crackage", "Test de Sécurité"]
+  },
+  {
+    id: 3,
+    title: "MédailleCollect",
+    description: "Le catalogue numérique des monuments touristiques — collectionnez vos médailles à 2€ et vos billets souvenir à 0€",
+    image: "/photos/projets/medaillecollect.webp",
+    technologies: ["React", "Node.js", "MongoDB"],
+    features: ["Collection", "Billets souvenir", "Monuments touristiques", "Application mobile Android"],
+    liveUrl: "https://medaillecollect.fr"
   }
 ];
 
